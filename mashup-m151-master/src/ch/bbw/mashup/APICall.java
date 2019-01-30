@@ -22,7 +22,6 @@ public class APICall {
 			this.url = new URL(url);
 			conn = (HttpURLConnection) this.url.openConnection();
 			conn.setRequestMethod("GET");
-
 			in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
 			this.response = new StringBuilder();
@@ -31,11 +30,8 @@ public class APICall {
 			while ((input = in.readLine()) != null) {
 				response.append(input);
 			}
-
 			in.close();
-
 			return response.toString();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

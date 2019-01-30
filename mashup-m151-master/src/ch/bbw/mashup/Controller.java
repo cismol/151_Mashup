@@ -84,7 +84,7 @@ public class Controller implements Initializable {
 		ObservableList<String> test = FXCollections.observableArrayList();
 		test.add("test");
 
-		// Standard StationBoard ist aktuell Dorf mit ID 8506980
+		// Standard StationBoard ist Dorf mit ID 8506980
 		stationBoard = transportAPI.getStationBoard("8506989");
 
 		lv_abfahrtsort.setMouseTransparent(true);
@@ -102,7 +102,6 @@ public class Controller implements Initializable {
 		refresh();
 
 		bt_search.setOnAction(ae -> {
-
 			try {
 				stationIDFrom = transportAPI.getID(tf_from.getText());
 				if (!tf_from.getText().isEmpty() & !tf_to.getText().isEmpty()) {
@@ -119,7 +118,6 @@ public class Controller implements Initializable {
 						"Mindestens das Feld \"Von\" muss ausgefüllt sein, oder eine gï¿½ltige Eingabe muss gemacht werden!");
 				alert.showAndWait();
 			}
-
 			refresh();
 		});
 

@@ -10,10 +10,8 @@ public class Coordinate {
 	private double y;
 
 	public Coordinate(Double x, Double y) {
-
 		this.x = x;
 		this.y = y;
-
 	}
 
 	public double getxCoordinate() {
@@ -31,5 +29,4 @@ public class Coordinate {
 	public void setyCoordinate(double y) {
 		this.y = y;
 	}
-
 }

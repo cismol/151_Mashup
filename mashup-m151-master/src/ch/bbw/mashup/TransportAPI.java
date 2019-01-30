@@ -26,7 +26,7 @@ public class TransportAPI {
 	public StationBoard getStationBoard(String id) {
 
 		JSONObject mainJSONObject = new JSONObject(transportAPICall
-				.getResponse("http://transport.opendata.ch/v1/stationboard?station=" + id + "&limit=12"));
+				.getResponse("http://transport.opendata.ch/v1/stationboard?station=" + id + "&limit=15"));
 		JSONObject jsonStartStation = mainJSONObject.getJSONObject("station");
 		JSONArray jsonStationBoard = mainJSONObject.getJSONArray("stationboard");
 

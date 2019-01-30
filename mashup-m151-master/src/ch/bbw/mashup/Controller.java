@@ -140,7 +140,7 @@ public class Controller implements Initializable {
 
 					imageView.setFitWidth(30);
 					setGraphic(imageView);
-					setText(splitIconAndTemp[1] + "Â°C");
+					setText(splitIconAndTemp[1] + "°C");
 				}
 			}
 		});

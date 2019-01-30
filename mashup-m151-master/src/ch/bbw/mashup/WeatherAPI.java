@@ -29,15 +29,18 @@ public class WeatherAPI {
 		Long temperatureLong;
 
 		this.weatherIcons = FXCollections.observableArrayList();
-		
+		;
 
 		for (Coordinate coordinate : coordinates) {
 
-			JSONObject mainJSONObject = new JSONObject(weatherAPI.getResponse("http://api.openweathermap.org/data/2.5/weather?lat=" + coordinate.getxCoordinate()
+			JSONObject mainJSONObject = new JSONObject(weatherAPI
+					.getResponse("http://api.openweathermap.org/data/2.5/weather?lat=" + coordinate.getxCoordinate()
 							+ "&lon=" + coordinate.getyCoordinate() + "&APPID=" + APIKey));
 			JSONArray jsonWeather = mainJSONObject.getJSONArray("weather");
 			JSONObject jsonWeatherMain = mainJSONObject.getJSONObject("main");
+
 			JSONObject jsonWeatherInstance = jsonWeather.getJSONObject(0);
+
 			weatherIcon = jsonWeatherInstance.getString("icon");
 
 			// temperatur von Kelvin zu Grad Celsius

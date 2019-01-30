@@ -64,11 +64,17 @@ public class TransportAPI {
 		for (int i = 0; i < jsonStations.length(); i++) {
 
 			JSONObject jsonStationsInstance = jsonStations.getJSONObject(i);
+
+			// Wenn die gesuchte Haltestelle mit einer von der API
+			// zur�ckgelieferten Haltestelle �bereinstimmt
 			if (jsonStationsInstance.getString("name").equals(name)) {
 				return jsonStationsInstance.getInt("id");
 			}
 
 		}
+
+		// Wenn keine Haltestelle genau mit den Ergebnissen �bereinstimmt, die
+		// erste Haltestelle zur�ckliefern
 		return jsonStations.getJSONObject(0).getInt("id");
 
 	}
@@ -114,11 +120,21 @@ public class TransportAPI {
 			Date currentDate = new Date();
 
 			df.setTimeZone(tz);
+
+			// Differenz zwischen aktueller Uhrzeit und Abfahrtszeit berechnen
+			// und
+			// diese von Millisekunden zu Minuten rechnen
 			int departureInMinutes = ((int) Math
 					.ceil(((double) departureDate.getTime() - (double) currentDate.getTime()) / (1000 * 60)));
+
+			// Wenn Abfahrt in unter einer Stunde, nur die Minuten zur�ckgeben
+			// (Modulo 60 von der Abfahrt in Minuten)
 			if (departureInMinutes / 60 == 0) {
 				return String.valueOf(departureInMinutes % 60);
 			}
+			// Sonst die Minuten zu Stunden umwandeln und mit den restlichen
+			// Minuten (Modulo 60 von der Abfahrt in Minuten)
+			// konkatinieren
 			else {
 				return String.valueOf(departureInMinutes / 60 + "h, " + departureInMinutes % 60);
 			}

@@ -1,1 +1,2 @@
-Projekt in lokales Git-Repo clonen, und in eclipse als Maven-Projekt importieren.
+Projektclonen, und in eclipse als Maven-Projekt importieren.
+- Cisco Molnar

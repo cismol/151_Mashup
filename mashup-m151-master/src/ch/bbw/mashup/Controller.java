@@ -46,6 +46,9 @@ public class Controller implements Initializable {
 	private Label lb_StationBoard;
 
 	@FXML
+	private Label lb_Text;
+
+	@FXML
 	private TextField tf_from;
 
 	@FXML

@@ -64,18 +64,11 @@ public class StationBoard {
 		this.abfahrtsOrte = abfahrtsOrte;
 	}
 
-	public void addItems(String abfahrtsort, String ziel, String abfahrt, String linie, Double xCoordinate,
-			Double yCoordinate) {
+	public void addItems(String abfahrtsort, String ziel, String abfahrt, String linie, Double xCoordinate,	Double yCoordinate) {
 		this.ziele.add(ziel);
-
 		this.abfahrten.add("In " + abfahrt + "min");
-
 		this.linien.add(linie);
-
 		this.zielCoordinates.add(new Coordinate(xCoordinate, yCoordinate));
-
 		this.abfahrtsOrte.add(abfahrtsort);
-
 	}
-
 }

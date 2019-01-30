@@ -20,7 +20,7 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("MainView.fxml"));
 			AnchorPane root = loader.load();
 
-			Scene scene = new Scene(root, 750, 450);
+			Scene scene = new Scene(root, 750, 515);
 
 			primaryStage.setTitle("StationBoard");
 			primaryStage.getIcons().add(new Image("resources/train.png"));

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="644.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbw.mashup.Controller">
+   <children>
+      <HBox layoutX="7.0" layoutY="79.0" prefHeight="551.0" prefWidth="1099.0">
+         <children>
+            <VBox prefHeight="551.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lb_abfahrtsort" style="-fx-font-weight: bold;" text="Abfahrtsort" />
+                  <ListView fx:id="lv_abfahrtsort" prefHeight="350.0" prefWidth="160.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="551.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lb_Ziel" style="-fx-font-weight: bold;" text="Zielort" />
+                  <ListView fx:id="lv_Ziel" prefHeight="350.0" prefWidth="188.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="551.0" prefWidth="102.0">
+               <children>
+                  <Label fx:id="lb_Abfahrt" style="-fx-font-weight: bold;" text="Abfahrtszeit" />
+                  <ListView fx:id="lv_Abfahrt" prefHeight="350.0" prefWidth="106.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="551.0" prefWidth="96.0">
+               <children>
+                  <Label fx:id="lb_Linie" style="-fx-font-weight: bold;" text="Name/Linie" />
+                  <ListView fx:id="lv_Linie" prefHeight="350.0" prefWidth="96.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="410.0" prefWidth="133.0">
+               <children>
+                  <Label fx:id="lb_weather" prefHeight="10.0" prefWidth="133.0" style="-fx-font-weight: bold;" text="Wetter Zielort" />
+                  <ListView fx:id="lv_weather" prefHeight="350.0" prefWidth="133.0" style="-fx-fixed-cell-size: 1.92em;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="lb_StationBoard" layoutX="7.0" layoutY="12.0" prefHeight="17.0" prefWidth="200.0" style="-fx-font-weight: bold;" text="StationBoard" />
+      <TextField fx:id="tf_from" layoutX="7.0" layoutY="34.0" prefHeight="26.0" prefWidth="185.0" promptText="Von" />
+      <Button fx:id="bt_search" layoutX="378.0" layoutY="34.0" mnemonicParsing="false" text="Suche" />
+      <TextField fx:id="tf_to" layoutX="192.0" layoutY="34.0" prefHeight="26.0" prefWidth="186.0" promptText="Nach" />
+   </children>
+</AnchorPane>

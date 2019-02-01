@@ -1,4 +1,4 @@
-package ch.bbw.mashup;
+package ch.bbw.mc.mashup;
 
 import java.text.DateFormat;
 import java.text.ParseException;

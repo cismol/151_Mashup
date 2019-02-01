@@ -1,4 +1,4 @@
-package ch.bbw.mashup;
+package ch.bbw.mc.mashup;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

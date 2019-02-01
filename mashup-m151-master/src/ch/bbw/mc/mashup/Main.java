@@ -1,4 +1,4 @@
-package ch.bbw.mashup;
+package ch.bbw.mc.mashup;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

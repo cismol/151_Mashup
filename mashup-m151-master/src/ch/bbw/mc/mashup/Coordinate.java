@@ -1,4 +1,4 @@
-package ch.bbw.mashup;
+package ch.bbw.mc.mashup;
 
 /**
  * @author Cisco Molnár
